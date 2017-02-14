@@ -1,0 +1,13 @@
+Using an Elevator
+-Determine what floor you want to go to
+-If the floor you wish to go to is higher up
+	-Press the up button near the elevator doors
+-If the floor you wish to go to is lower
+	-Press the down button near the elevator doors
+-Wait for the elevator to arrive and for the doors to open
+-Enter the elevator
+-Press the button for the floor you want to go to (the numbers on the button correspond with the floor)
+-Wait for the elevator to arrive at that floor 
+-When the floor display in the elevator says you have arrived at your floor
+	-Exit the elevator and you have arrived at your floor
+
