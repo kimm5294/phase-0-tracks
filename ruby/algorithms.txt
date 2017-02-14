@@ -11,3 +11,32 @@ Using an Elevator
 -When the floor display in the elevator says you have arrived at your floor
 	-Exit the elevator and you have arrived at your floor
 
+Make a PB&J
+-Open cupboard and acquire a plate
+-Put plate on table in front of you
+-Get loaf of bread and pick out two slices
+-If one or more of the slices of bread is an end piece:
+	-Put back in bag and acquire slice of bread that is not an end piece
+-Place slices of bread on plate next to each other
+-Pull peanut butter out of pantry
+-Open peanut butter jar
+-Get knife from drawer
+-Open peanut butter jar
+-If peanut butter is smooth:
+	-Close jar of peanut butter and put back in pantry, retrieve chunky peanut butter and open jar
+-Until peanut butter is evenly spread on one slice of bread:
+	-Use knife to scoop peanut butter out of jar and spread across one slice of bread
+-Close peanut butter jar and put back in pantry
+-Retrieve jelly from fridge
+-Open jelly and retrieve spoon from drawer
+-Until jelly is evenly distributed on slice of bread:
+	-Scoop out jelly with spoon 
+	-Spread evenly across slice of bread without peanut butter on it
+-Close jelly jar and put back in fridge
+-Put spoon and knife in sink for cleaning
+-Lift slice of bread with peanut butter and place on top of jelly slice of bread so peanut butter and jelly meet in the middle
+-Pat down sandwich 
+-Until sandwich is gone:
+	-Lift sandwich to mouth
+	-Bite part of sandwich off 
+	-Chew and swallow
