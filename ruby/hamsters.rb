@@ -18,8 +18,8 @@ puts "How old is your hamster?"
      age = age.to_i
    end
 
-p "Hamster Name: " + hname
-p "Volume level: " + volume
-p "Fur Color: " + fur
-p "Good Adoption Candidate: " + good
-p "Estimated Age: " + age
+puts "Hamster Name: #{hname}"
+puts "Volume level: #{volume}"
+puts "Fur Color: #{fur}"
+puts "Good Adoption Candidate: #{good}"
+puts "Estimated Age: #{age}"
