@@ -10,7 +10,7 @@ puts "Fur color?"
 puts "Good candidate for adoption? (y/n)"
   good = gets.chomp
 
-puts "How old is your hampster?"
+puts "How old is your hamster?"
   age = gets.chomp
   if age == ""
     age = nil
