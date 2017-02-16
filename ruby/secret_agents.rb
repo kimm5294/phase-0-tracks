@@ -61,3 +61,26 @@ end
 #then the result of the previous method called becomes the input of the next called method.
 #This is why the input "swordfish" comes back out of both methods as the same string. 
 
+#Interface algorithm
+=begin
+-puts message prompting for encrypt or decrypt
+-set variable encrypt_or_decrypt equal to gets.chomp
+-puts a prompt asking for password
+-set variable password equal to gets.chomp
+-create if statement saying that if encrypt_or_decrypt equals "encrypt" then call method for encrypt with password as input 
+-create if statement saying that if encrypt_or_decrypt equals "decrypt" then call method for decrypt with password as input
+=end
+
+puts "Welcome agent, would you like to encrypt or decrypt a password?"
+encrypt_or_decrypt= gets.chomp
+
+puts "Please enter password:"
+password= gets.chomp
+
+if encrypt_or_decrypt == "encrypt"
+  encrypt(password)
+end
+
+if encrypt_or_decrypt == "decrypt"
+  decrypt(password)
+end
