@@ -21,24 +21,43 @@ def encrypt (string)
     end
     counter+=1
   end
-  puts string
+  p string
 end
 
 =begin
 -define a method called decrypt
 -set input as a string
--create a counter variable that starts at 0
--create loop that loops through each index of string 
--in loop use .
+-create a counter variable that starts at 0 and an alphabet variable that is a string and lists all the letters
+-of the alphabet in order
+-create loop that loops through each index of string and ends once it equals the string length 
+-in loop set string[counter]= the letter prior to string[counter] using alphabet[alphabet.index(string[counter])-1]
+-add 1 to the counter and end the loop
+-print the string
+-end the method
 
 =end
 
 def decrypt (string)
   alphabet= "abcdefghijklmnopqrstuvwxyz"
-
+  counter= 0
+  while counter < string.length
+    string[counter] = alphabet[alphabet.index(string[counter])-1]
+    counter+=1
+  end
+  p string
 end
 
 
-puts encrypt("abc")
+#encrypt("abc")
 
-puts encrypt("zed")
+#encrypt("zed")
+
+#decrypt("bcd")
+
+#decrypt("afe")
+
+#decrypt(encrypt("swordfish"))
+#This method call works because each method acts separately and only one is performed at a time and
+#then the result of the previous method called becomes the input of the next called method.
+#This is why the input "swordfish" comes back out of both methods as the same string. 
+
