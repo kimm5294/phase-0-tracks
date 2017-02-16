@@ -7,6 +7,10 @@
 -print new string outside of loop
 =end
 
-def encrypt 
-  
+def encrypt (string)
+  counter = 0
+  while counter < string.length
+    string[counter].next!
+    counter+=1
+  end
 end
