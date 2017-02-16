@@ -13,13 +13,14 @@ gbread= gets.chomp
 puts "Do you want to enroll in company health insurance? (y/n)"
 insurance= gets.chomp
 
-if ((2017-birthyear.to_i) = age.to_i) && (gbread="y" || insurance="y")
-  puts "Probably not a vampire"
-elsif ((2017-birthyear.to_i) != age.to_i) && (gbread="n" || insurance="n")
-  puts "Probably a vampire"
-elsif ((2017-birthyear.to_i) != age.to_i) && gbread="n" && insurance="n"
+if name == "Drake Cula" || name == "Tu Fang"
+  puts "Definitely a vampire" 
+elsif ((2017-birthyear.to_i) != age.to_i) && gbread =="n" && insurance =="n"
   puts "Almost certainly a vampire"
-elsif name = "Drake Cula" || name = "Tu Fang"
-  puts "Definitely a vampire"
+elsif ((2017-birthyear.to_i) != age.to_i) && (gbread == "n" || insurance =="n")
+  puts "Probably a vampire"
+elsif ((2017-birthyear.to_i) == age.to_i) && (gbread =="y" || insurance =="y")
+  puts "Probably not a vampire"
 else 
   puts "Results inconclusive"
+end
