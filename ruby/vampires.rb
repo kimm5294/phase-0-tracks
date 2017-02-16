@@ -1,6 +1,6 @@
 puts "How many employees will be processed?"
 number_employees = gets.chomp
-number_employees.to_i!
+number_employees = number_employees.to_i
 counter = 0
 
 while counter < number_employees
