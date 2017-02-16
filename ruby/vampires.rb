@@ -20,7 +20,15 @@ while counter < number_employees
   puts "Do you want to enroll in company health insurance? (y/n)"
   insurance= gets.chomp
 
-  if name == "Drake Cula" || name == "Tu Fang"
+  puts "Please list any allergies and enter done once you are finished"
+  allergy = nil
+  until allergy == "sunshine" || allergy == "done"
+    allergy = gets.chomp
+  end
+
+  if allergy == "sunshine"
+    puts "Probably a vampire"
+  elsif name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire" 
   elsif ((2017-birthyear.to_i) != age.to_i) && gbread =="n" && insurance =="n"
     puts "Almost certainly a vampire"
