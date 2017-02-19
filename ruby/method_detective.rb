@@ -5,6 +5,7 @@
 # committed the crime, add additional calls to prove it.
 
 # "iNvEsTiGaTiOn".swapcase
+# "iNvEsTiGaTiOn".swapcase!
 # => “InVeStIgAtIoN”
 
 # "zom".<???>
@@ -13,7 +14,8 @@
 # "enhance".center(15)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+# "Stop! You’re under arrest!".upcase
+# "Stop! You’re under arrest!".upcase!
 # => "STOP! YOU’RE UNDER ARREST!"
 
 # "the usual".<???>
