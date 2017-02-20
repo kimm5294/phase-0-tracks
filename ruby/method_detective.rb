@@ -8,7 +8,8 @@
 # "iNvEsTiGaTiOn".swapcase!
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+# "zom".insert(1, "o")
+# "zom".insert(2, "o")
 # => “zoom”
 
 # "enhance".center(15)
@@ -24,7 +25,8 @@
 # " suspects".<???>
 # => "the usual suspects"
 
-# "The case of the disappearing last letter".<???>
+# "The case of the disappearing last letter".chop
+# "The case of the disappearing last letter".chop!
 # => "The case of the disappearing last lette"
 
 # "The mystery of the missing first letter".<???>
