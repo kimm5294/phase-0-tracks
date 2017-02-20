@@ -19,10 +19,10 @@
 # "Stop! You’re under arrest!".upcase!
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+# "the usual".insert(-1, " suspects")
 #=> "the usual suspects"
 
-# " suspects".<???>
+# " suspects".insert(0, "the usual")
 # => "the usual suspects"
 
 # "The case of the disappearing last letter".chop
