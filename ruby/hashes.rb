@@ -20,5 +20,28 @@ client_info = {
   has_pets: ""
 }
 
+puts "Please enter client name: "
+client_info[:client_name] = gets.chomp
 
+puts "Please enter client age: "
+client_info[:age] = gets.chomp.to_i
 
+puts "Please enter client's number of children: "
+client_info[:number_children] = gets.chomp.to_i
+
+puts "Please enter decor theme: "
+client_info[:decor_theme] = gets.chomp
+
+puts "Does client have any pets? (y/n)"
+pets = ""
+until pets == "y" || pets == "n" 
+  pets = gets.chomp
+  if pets == "y"
+    client_info[:has_pets] = true
+  elsif pets == "n"
+    client_info[:has_pets] = false
+  else 
+    puts "Please enter a valid entry (y/n)"
+  end
+end 
+puts client_info 
