@@ -11,3 +11,14 @@
     -Write code that changes the value for the key and overwrites the old one
   -Print hash
 =end
+
+client_info = {
+  client_name: "",
+  age: "",
+  number_children: "",
+  decor_theme: "",
+  has_pets: ""
+}
+
+
+
