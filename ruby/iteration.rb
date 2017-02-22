@@ -76,3 +76,42 @@ animals = animals.drop_while{|x| x.length < 6}
 puts " "
 print animals
 =end
+
+puts ""
+puts "HASHES!"
+puts ""
+
+=begin
+#this is the answer to question 1 in release 2 for hashes 
+oceans.delete_if{
+    |fish, ocean| fish >= "s"
+}
+puts oceans
+=end
+
+=begin 
+puts ""
+puts "keep_if"
+puts ""
+#this is the answer to question 2 in release 2 for hashes
+oceans.keep_if{
+    |fish, ocean| ocean == "Arctic" || ocean == "Pacific"
+}
+puts oceans
+=end 
+
+=begin
+#this is the answer to question 3 in release 2 for hashes
+oceans.reject! do |fish, ocean|
+  fish.length > 5
+end
+puts oceans 
+=end 
+
+=begin
+#this is the answer to question 4 in release 2 for hashes 
+while oceans.length > 2
+  oceans.replace({"Glow fish" => "Arctic", "Lionfish" => "Pacific"})
+end
+puts oceans
+=end
