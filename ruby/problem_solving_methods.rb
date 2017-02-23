@@ -36,10 +36,15 @@ Pseudocode for Fibonacci Sequence
 #starting array with 0 and 1 for Fibonacci sequence
 fib_sequence = [0, 1]
 
-def fib()
-  
+def fib(array, num)
+  (num-2).times do |x|
+    array.push((array[-1] + array[-2]))
+  end
+  return array[num-1] 
 end 
 
+p fib(fib_sequence, 100)
+p fib_sequence
 
 
 
