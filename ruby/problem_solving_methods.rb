@@ -36,6 +36,10 @@ Pseudocode for Fibonacci Sequence
 #starting array with 0 and 1 for Fibonacci sequence
 fib_sequence = [0, 1]
 
+#method for fibonacci sequence
+#num is which fibonacci number you would like to have printed
+#you return num-1 bc the index starts from 0
+#num-2 bc we start with 2 items in the array
 def fib(array, num)
   (num-2).times do |x|
     array.push((array[-1] + array[-2]))
@@ -45,6 +49,8 @@ end
 
 p fib(fib_sequence, 100)
 p fib_sequence
+
+
 
 
 
