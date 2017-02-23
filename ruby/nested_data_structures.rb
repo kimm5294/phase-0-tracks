@@ -1,4 +1,4 @@
-westeros {
+westeros = {
  kings_landing: {
     rulers: "The Lannisters",
     noble_families: [
@@ -38,7 +38,8 @@ westeros {
     religion: "Varied",
     population: 100
   }
- }
+ },
+
  other_regions: [
     "Braavos",
     "Old Valyria",
@@ -47,6 +48,13 @@ westeros {
  ]
 }
 
+puts westeros[:nights_watch][:rulers].upcase
 
+puts westeros[:kings_landing][:other_info][:population]
 
+puts westeros[:the_north][:noble_families][2]
+
+p westeros[:other_regions].reverse
+
+puts westeros[:nights_watch][:other_info][:castle]
 
