@@ -47,8 +47,44 @@ def fib(array, num)
   return array[num-1] 
 end 
 
-p fib(fib_sequence, 100)
-p fib_sequence
+#p fib(fib_sequence, 100)
+#p fib_sequence
+
+
+=begin 
+Pseudocode for Sorting Array
+-define a method for the sorting method in this case bubble sort
+-set a variable for array length 
+-create a loop to contain bubble sorting method
+-create a variable that is assumed as false
+-bubble sorting method compares array items that are next to each other by index
+-sorting method inside loop swaps based on value of each index by comparing indexes that are next to each other
+-variable in loop is changed to true when array values are switched
+-once swapping is complete loop will break because variable will have value of true 
+-it will print the sorted array once loop is broken  
+=end 
+
+
+#array used for sorting
+to_be_sorted = [10, 123, 1, 43, 67, 37, 987, 43, 6, 4, 1, 76, 34]
+
+#method for sorting array- bubble sort
+def bubble_sort(array)
+  loop do 
+    x = false
+    (array.length-1).times do |i|
+      if array[i] > array[i+1]
+        array[i], array[i+1] = array[i+1], array[i]
+        x = true
+      end 
+   end 
+  break if not x 
+  end 
+puts array 
+end 
+
+bubble_sort(to_be_sorted)
+
 
 
 
