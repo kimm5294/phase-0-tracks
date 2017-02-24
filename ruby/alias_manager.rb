@@ -11,38 +11,40 @@ Pseudocode
 
 
 
-#Method for splitting string
-def alias_generator(string)
-  split_name = string.downcase.split(" ")
-  first_name = [split_name[1].chars]
-  last_name = [split_name[0].chars]
+def letter_change(array)
+  con = "bcdfghjklmnpqrstvwxyz"
+  cons = con.chars.reverse
+  vows = "aeiou".chars.reverse
+  nam = []
+  array.length.times do |x| 
 
-  vowels(first_name)
+    nam.push(nil) #creates new array to add changed letters to
 
-  puts first_name
-  puts last_name
-end 
-
-
-
-def vowels(array)
-  vow = "aeiou"
-  vows = vow.chars
-  array.map do |x|
-    vows.map do |y|
-      if y == x 
-        x = vows[y+1]
+    vows.length.times do |y| #changes vowels
+      if array[x] == vows[y]
+        nam[x] = vows[y-1]
       end 
     end 
+
+    cons.length.times do |z| #changes consonants 
+      if array[x] == cons[z]
+        nam[x] = cons[z-1]
+      end 
+    end
+
   end 
+  array = nam 
+end 
+
+#Method for splitting string and reuniting 
+def alias_generator(string)
+  split_name = string.downcase.split(" ")
+  first_name = split_name[1].chars
+  last_name = split_name[0].chars
+  final_first = letter_change(first_name).join.capitalize
+  final_last = letter_change(last_name).join.capitalize
+  return final_first + " " +final_last
 end 
 
 
-def consonants(array)
-  con = "bcdfghjklmnpqrstvwxyz"
-  cons = con.chars
-
-end
-
-
-alias_generator("matt kim")
+#User Interface
