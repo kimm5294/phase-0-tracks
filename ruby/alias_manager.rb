@@ -48,3 +48,9 @@ end
 
 
 #User Interface
+puts "Please enter a first and last name (type 'quit' to exit)"
+loop do
+  input = gets.chomp 
+  break if input == "quit"
+  p alias_generator(input)  
+end 
