@@ -4,7 +4,8 @@ Pseudocode
 -Store input into variable
 -Break up input into two separate strings and store each name in array as individual letters
 -Create two separate variables: one for vowels in order and the other for consonants in order
--Create two separate methods: one for vowels and one for consonants that change the letter to the next one
+-Create method for changing vowels and consonants to the next one
+-Loop through input array for method and inside that loop have separate loops checking for consonants and vowels
 -Loop through the arrays for first and last name using the vowel and consonant method to change the letters
 -Join the letters back together to make the new name and print name as well as flipping first and last name
 =end 
@@ -15,25 +16,25 @@ def letter_change(array)
   con = "bcdfghjklmnpqrstvwxyz"
   cons = con.chars.reverse
   vows = "aeiou".chars.reverse
-  nam = []
+  name = []
   array.length.times do |x| 
 
-    nam.push(nil) #creates new array to add changed letters to
+    name.push(nil) #creates new array to add changed letters to
 
     vows.length.times do |y| #changes vowels
       if array[x] == vows[y]
-        nam[x] = vows[y-1]
+        name[x] = vows[y-1]
       end 
     end 
 
     cons.length.times do |z| #changes consonants 
       if array[x] == cons[z]
-        nam[x] = cons[z-1]
+        name[x] = cons[z-1]
       end 
     end
 
-  end 
-  array = nam 
+  end
+  array = name
 end 
 
 #Method for splitting string and reuniting 
