@@ -49,8 +49,14 @@ end
 
 #User Interface
 puts "Please enter a first and last name (type 'quit' to exit)"
+name_database = {}
 loop do
   input = gets.chomp 
   break if input == "quit"
-  p alias_generator(input)  
+  p alias_generator(input)
+  name_database[input] =  alias_generator(input) 
 end 
+name_database.each {|key, value| puts "#{key} is also known as #{value}" }
+
+
+
