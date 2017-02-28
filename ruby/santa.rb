@@ -16,6 +16,32 @@ class Santa
     @age = 0
   end 
 
+  #add one year to age
+  def celebrate_birthday
+    @age = @age + 1
+    puts @age
+  end 
+
+  #moves reindeer to last in the rankings
+  def get_mad_at(reindeer_name)
+
+  end
+
+  #setter method that changes @gender
+  def gender_change=(new_gender)
+
+  end  
+
+  #GETTER METHODS
+  #Method for returning age
+  def age
+    return @age 
+  end 
+
+  #Method for returning ethnicity 
+  def ethnicity 
+    return @ethnicity 
+  end 
 end 
 
 santas = []
@@ -24,5 +50,5 @@ example_genders = ["male", "female", "agender", "bigender", "gender fluid", "N/A
 example_ethnicities = ["black", "asian", "latino", "native american", "pacific islander", "white", "other", "N/A"]
 
 #add 10 santas to santas array using rand(int) as a random number generator to choose a random gender/ethnicity
-10.times {santas << Santa.new(example_genders[rand(6)], example_ethnicities[rand(8)])}
+#10.times {santas << Santa.new(example_genders[rand(6)], example_ethnicities[rand(8)])}
 
