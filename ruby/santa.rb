@@ -1,7 +1,7 @@
 class Santa
 
-  attr_reader :age, :ethnicity, :reindeer_ranking
-  attr_accessor :gender
+  attr_reader :ethnicity, :reindeer_ranking
+  attr_accessor :gender, :age 
 
   def speak 
     puts "Ho, ho, ho! Haaaappy holidays!"
@@ -43,8 +43,10 @@ end
 santas = []
 
 example_genders = ["male", "female", "agender", "bigender", "gender fluid", "N/A"]
-example_ethnicities = ["black", "asian", "latino", "native american", "pacific islander", "white", "other", "N/A"]
+example_ethnicities = ["african american", "asian", "latino", "native american", "pacific islander", "white", "other", "N/A"]
 
+#code used to create some test santas and test the methods 
+=begin 
 #add 10 santas to santas array using rand(int) as a random number generator to choose a random gender/ethnicity
 10.times {santas << Santa.new(example_genders[rand(6)], example_ethnicities[rand(8)])}
 
@@ -60,3 +62,16 @@ puts santas[1].ethnicity
 p santas[1].reindeer_ranking
 santas[1].get_mad_at("Prancer")
 p santas[1].reindeer_ranking
+=end 
+
+#Code that prints out a bunch of random santas for release 4
+100.times do |x| 
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+  santas[x].age = rand(141)
+  puts "Santa #{x}"
+  puts santas[x].age 
+  puts santas[x].ethnicity
+  puts santas[x].gender 
+  p santas[x].reindeer_ranking
+  p "..."
+end 
