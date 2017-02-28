@@ -32,11 +32,6 @@ class Santa
     end 
   end
 
-  #Method for returning reindeer ranking
-  def reindeer_ranking
-    return @reindeer_ranking  
-  end 
-
 end 
 
   
