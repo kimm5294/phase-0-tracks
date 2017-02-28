@@ -114,3 +114,23 @@ loop do
 end 
 
 
+=begin 
+I learned that pseudocode can be your best friend when programming. It made the next steps very clear and
+eliminated any confusion on what to do. 
+
+Arrays in my opinion are very easy to use compared to hashes and easier to understand but
+hashes are much more powerful in that they can store more information like the quantities 
+
+A method returns what you tell it to return unless it is implicitly returning the last line 
+
+You can pass various different data types into methods as arguments including strings, integers, floats, 
+arrays, hashes, etc
+
+You can pass information between methods by inputting the results of a method as the input of another. 
+You can also use variables that have a global scope and have the methods alter that and input that variable 
+into the other methods. 
+
+I feel much more comfortable with hashes than I did before, pseudocoding and how to break apart methods to 
+perform very specific tasks. Some concepts that are still confusing are whether or not there are better ways
+to pass information between methods than how we did it in this gps. 
+=end 
