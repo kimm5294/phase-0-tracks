@@ -1,5 +1,8 @@
 class Santa
 
+  attr_reader :age, :ethnicity, :reindeer_ranking
+  attr_accessor :gender
+
   def speak 
     puts "Ho, ho, ho! Haaaappy holidays!"
   end 
@@ -29,27 +32,6 @@ class Santa
     end 
   end
 
-  #setter method that changes @gender
-  def gender_change=(new_gender)
-    @gender = new_gender
-  end  
-
-  #GETTER METHODS
-  #Method for returning age
-  def age
-    return @age 
-  end 
-
-  #Method for returning ethnicity 
-  def ethnicity 
-    return @ethnicity 
-  end 
-
-  #Method for returning gender
-  def gender
-    return @gender 
-  end 
-
   #Method for returning reindeer ranking
   def reindeer_ranking
     return @reindeer_ranking  
@@ -67,7 +49,7 @@ example_ethnicities = ["black", "asian", "latino", "native american", "pacific i
 10.times {santas << Santa.new(example_genders[rand(6)], example_ethnicities[rand(8)])}
 
 puts santas[1].gender 
-santas[1].gender_change = "bro"
+santas[1].gender = "bro"
 puts santas[1].gender 
 puts "..."
 puts santas[1].age
