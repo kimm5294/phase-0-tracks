@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Michael Knapp].
+# We spent [1.25] hours on this challenge.
 
 # EXPLANATION OF require_relative
 #Require is used to link two files and pull code from the other file into the current one, as if they were in the same file. 
@@ -101,4 +101,17 @@ end
 
 #=======================================================================
 # Reflection Section
+=begin 
+The differences between the two different hash syntaxes is that one uses a string as the key and then a hash rocket.
+The other syntax uses a symbol as the key and therefore uses a colon instead of a hash rocket to separate it from the value. 
 
+Require is used to link a file to another file so that they act as if they were in the same file. 
+The difference between require and require relative is that require relative uses a relative path to link the files
+while require uses an absolute path. 
+
+Some ways to iterate through a hash include the .each method or .map. 
+
+When refactoring virus_effects I noticed that the variables were instance variables and had the "@" symbol in front of them. 
+
+The concept I felt that I most solidified in this challenge was the idea of refactoring and what to look for when trying to do that. 
+=end 
