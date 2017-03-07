@@ -4,8 +4,9 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+#Require is used to link two files and pull code from the other file into the current one, as if they were in the same file. 
+#Relative means that the files are linked together using a relative path from the current file as opposed to an absolute path, 
+#which require would use. 
 require_relative 'state_data'
 
 class VirusPredictor
