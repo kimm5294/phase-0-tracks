@@ -102,4 +102,11 @@ function randomWordGenerator(integer) {
 //console.log(z);
 //console.log(a);
 
+//Driver Code for Release 2
+//Create an array, print array and find longest word in array 10 times 
+for (var i = 0; i < 10; i++) {
+  var xyz = randomWordGenerator(10);
+  console.log(xyz);
+  console.log(findLongWord(xyz));
+}
 
