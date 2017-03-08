@@ -1,3 +1,4 @@
+//PSEUDOCODE
 //Method that returns the longest word/phrase of an array
 //Input: an array of words/phrases
 //Method:
@@ -17,10 +18,28 @@ function findLongWord(arrayOfWords) {
       longestWord = arrayOfWords[i];
     }
   }
-
-
   return longestWord;
 }
+
+
+//Method that returns true or false if two objects have the same key-value pair
+//Input: two objects with key-value pairs
+//Method:
+//Define a function that takes two objects as input
+//Do two levels of loops to loop through each objects keys and compare
+//IF objects have the same key then return true if the values of those keys are also the same
+//ELSE return false
+//Output: boolean
+
+function matchKeyValue(object1, object2) {
+
+  
+}
+
+
+
+
+//DRIVER CODE
 
 //Driver Code to test longest word finding method
 var array1 = ["hello", "hi", "what is good"];
@@ -29,4 +48,5 @@ var x = findLongWord(array1);
 var y = findLongWord(array2);
 console.log(x);
 console.log(y);
+
 
