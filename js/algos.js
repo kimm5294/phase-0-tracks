@@ -45,6 +45,27 @@ function matchKeyValue(object1, object2) {
 }
 
 
+//Method that returns an array of random strings 1 to 10 letters in length
+//Input: integer that determines length of array
+//Method:
+//Define a function that takes an integer as the length of the array
+//Define a variable as an empty array
+//Define another variable as the alphabet in string form
+//Create a loop that will loop through as many times as the integer given was
+//Define a word variable inside this loop but leave it as an empty string
+//Create another loop inside the first loop that will create a word 1 to 10 letters long
+//Randomly select a letter from the alphabet variable and push it into the word variable
+//Push the new word to the array that was created initially
+//Return the array
+//Output: an array of random strings that are 1 to 10 letters long and the number is set by the input
+
+
+
+
+
+
+
+
 
 
 //DRIVER CODE
@@ -59,10 +80,13 @@ function matchKeyValue(object1, object2) {
 
 
 //Driver Code to test second method that returns boolean for matching key-value pair
-var obj1 = {name: "MK", age: 3, boo: true};
-var obj2 = {name: "M", age: 5, boo: false};
-var z = matchKeyValue(obj1, obj2);
-console.log(z);
-
+//var obj1 = {name: "MK", age: 3, boo: true};
+//var obj2 = {name: "M", age: 3, boo: false};
+//var obj3 = {name: "MK", age: 3, boo: true};
+//var obj4 = {name: "M", age: 5, boo: false};
+//var z = matchKeyValue(obj1, obj2);
+//var a = matchKeyValue(obj3, obj4);
+//console.log(z);
+//console.log(a);
 
 
