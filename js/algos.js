@@ -60,8 +60,21 @@ function matchKeyValue(object1, object2) {
 //Output: an array of random strings that are 1 to 10 letters long and the number is set by the input
 
 
+function randomWordGenerator(integer) {
+  var wordsArray = [];
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
 
+  for (var i = 0; i < integer; i++) {
+    wordStorage = "";
 
+    for (var j = 0; j < Math.floor((Math.random()*10) + 1); j++) {
+      wordStorage = wordStorage + alphabet[Math.floor(Math.random()*26)];
+    }  
+
+    wordsArray.push(wordStorage);
+  }
+  return wordsArray
+}
 
 
 
