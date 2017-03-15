@@ -1,0 +1,68 @@
+1. 
+sqlite> SELECT * FROM animal;
+
+1    Bear                  true     200000      1
+2    Salmon                false    100000      2
+3    Giant Tortoise        false    10          3
+4    Poison Dart Frog      true     500000      4
+5    California Condor     false    500         5
+6    Tuna                  false    1500000     2 
+
+2. 
+sqlite> UPDATE animal SET population=100 WHERE name="California Condor";
+sqlite> SELECT * FROM animal;
+1    Bear                  true     200000      1
+2    Salmon                false    100000      2
+3    Giant Tortoise        false    10          3
+4    Poison Dart Frog      true     500000      4
+5    California Condor     false    100         5
+6    Tuna                  false    1500000     2 
+
+3. 
+sqlite> SELECT * FROM animal, classification WHERE animal.class_id=classification.id;
+1    Bear                  true    200000     1             1           Mammals
+2    Salmon                false   100000     2             2           Fish
+3    Giant Tortoise        false   10         3             3           Reptiles
+4    Poison Dart Frog      true    500000     4             4           Amphibians
+5    California Condor     false   100        5             5           Birds
+6    Tuna                  false   1500000    2             2           Fish
+
+4. 
+sqlite> SELECT animal.id, animal.name, animal.dangerous, animal.population, classification.name FROM animal JOIN classification ON animal.class_id = classification.id;
+1    Bear                  true    200000     Mammals
+2    Salmon                false   100000     Fish
+3    Giant Tortoise        false   10         Reptiles
+4    Poison Dart Frog      true    500000     Amphibians
+5    California Condor     false   100        Birds
+6    Tuna                  false   1500000    Fish
+
+5. 
+sqlite> DELETE FROM animal WHERE class_id=4;
+sqlite> SELECT * FROM animal;
+1    Bear                  true    200000     1
+2    Salmon                false   100000     2
+3    Giant Tortoise        false   10         3
+5    California Condor     false   100        5
+6    Tuna                  false   1500000    2
+
+Different Join Types
+
+Inner Join- Only shows rows that have complete sets of data from both tables 
+sqlite> SELECT animal.name, animal.dangerous, animal.population, classification.name FROM animal INNER JOIN classification ON animal.class_id=classification.id;
+Bear                  true     200000     Mammals
+Salmon                false    100000     Fish
+Giant Tortoise        false    10         Reptiles
+California Condor     false    100        Birds
+Tuna                  false    1500000    Fish
+
+Left Join- If there is information that the first table has but no match from the second table, the cell will just be left as null
+sqlite> SELECT animal.name, animal.dangerous, animal.population, classification.name FROM animal LEFT JOIN classification ON animal.class_id=classification.id;
+Bear                  true     200000     Mammals
+Salmon                false    100000     Fish
+Giant Tortoise        false    10         Reptiles
+California Condor     false    100        Birds
+Tuna                  false    1500000    Fish
+
+Right Join- If there is information that the second table has but no match from the first table, the cell will be left as null
+
+Full Join- Shows every row in both tables and leaves cells with no matches in the other table as null
