@@ -1,0 +1,18 @@
+1. 
+sqlite> SELECT businesses.name, reviews.stars, users.last_name, users.first_name, reviews.comment FROM reviews INNER JOIN businesses ON reviews.businesses_id = businesses.id INNER JOIN users ON users.id = reviews.users_id;
+
+Guitar Center    5    Johnson     Margaret    Great service
+Microsoft        3    Smith       John        Poor Customer Service
+Whole Foods      4    Jones       Hank        Great Selection
+
+2. 
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews INNER JOIN users ON users.id = reviews.users_id INNER JOIN businesses ON businesses.id = reviews.businesses_id;
+
+Margaret    Johnson       Guitar Center       5    Great service
+John        Smith         Microsoft           3    Poor Customer Service
+Hank        Jones         Whole Foods         4    Great Selection
+
+3. 
+sqlite> SELECT * FROM reviews INNER JOIN businesses ON businesses.id = reviews.businesses_id INNER JOIN users ON users.id = reviews.users_id WHERE businesses.name = "Microsoft";
+
+2    3    Poor Customer Service  1    1    1    Microsoft     1      John   Smith
