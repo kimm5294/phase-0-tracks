@@ -84,9 +84,64 @@ def show_completed(db)
   end 
 end 
 
-show_completed(db)
-puts ""
-display_list(db)
-puts ""
-mark_done(db, 5)
-show_completed(db)
+#USER INTERFACE
+
+loop do 
+
+  puts "To-Do List"
+  display_list(db)
+  puts "_____________________________"
+  puts "What would you like to do?"
+  puts "1- Mark item as done"
+  puts "2- Add an item"
+  puts "3- Delete an item"
+  puts "4- Edit an item"
+  puts "5- Edit the date of an item"
+  puts "6- Show completed items"
+  puts "7- Display to-do list"
+  puts 'Type "exit" or "quit" in order to quit out of the to-do list program'
+  puts "Please enter the number of the action you would like to take:"
+
+  input = gets.chomp
+
+  if input == "exit" || input == "quit"
+    break 
+  elsif input == "1"
+    puts "Please enter the id number of the item you would like to mark done:"
+    id_number = gets.chomp.to_i
+    mark_done(db, id_number)
+
+  elsif input == "2"
+    puts "Please enter the new item you would like to add to your list:"
+    added_item = gets.chomp
+    puts "Please enter the due date of the item:"
+    due_date = gets.chomp
+    add_item(db, added_item, due_date)
+  elsif input == "3"
+    puts "Please enter the id number of the item you would like to delete from the list:"
+    deleted = gets.chomp.to_i
+    delete_item(db, deleted)
+
+  elsif input == "4"
+    puts "Please enter the id number of the item you would like to edit:"
+    edit_id = gets.chomp.to_i
+    puts "Please enter the edited item you would like to enter:"
+    edited_item = gets.chomp
+    edit_item(db, edit_id, edited_item)
+  elsif input == "5"
+    puts "Please enter the id number of the item you would like to edit:"
+    edit_id = gets.chomp.to_i
+    puts "Please enter the new date you would like to enter:"
+    edited_date = gets.chomp
+    edit_date(db, edit_id, edited_date)
+  elsif input == "6"
+    puts "_____________________________"
+    puts "Completed Items List"
+    show_completed(db)
+    puts "_____________________________"
+  elsif input == "7"
+    display_list(db)
+  end 
+  puts "_____________________________"
+  puts ""
+end 
