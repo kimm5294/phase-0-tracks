@@ -24,6 +24,7 @@ db.execute(create_table_cmd)
   # A method that will display to do list
     #Input: db (the database)
     #Print out the to do list item and due date
+    #Only print items where done equals false
 def display_list(db)
   list = db.execute("SELECT id, item, date, done FROM todolist")
   list.each do |x|
@@ -32,8 +33,6 @@ def display_list(db)
     end 
   end 
 end 
-
-display_list(db)
 
   # A method that will edit to do list items which will be selected by its id number
     #Input: id of item to be edited, database, edited item
@@ -59,8 +58,11 @@ def add_item(db, new_item, new_date)
 end 
 
   # A method that will mark items as done
-    #Input: To do list item that is done
-    #
+    #Input: To do list item that is done's id number, database
+    #Change the value of item's done variable to true
+def mark_done(db, id)
+  db.execute("UPDATE todolist SET done=? WHERE id=?", ["true", id])
+end 
 
   # A method that will delete to do list items 
   # A method that will make a new list
