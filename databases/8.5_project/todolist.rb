@@ -72,8 +72,21 @@ def delete_item(db, id)
 end 
 
 
-  # A method that will make a new list
-    #This method should create a new table and allow it to be named
+  # A method that will show the completed items 
+    #Input: database
+    #Print out the to do list items that have done equals to true
+def show_completed(db)
+  list = db.execute("SELECT id, item, date, done FROM todolist")
+  list.each do |x|
+    if x[3] == "true"
+      puts "#{x[0]}: #{x[1]} Due: #{x[2]}" 
+    end 
+  end 
+end 
 
-
-
+show_completed(db)
+puts ""
+display_list(db)
+puts ""
+mark_done(db, 5)
+show_completed(db)
