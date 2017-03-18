@@ -11,10 +11,12 @@ db = SQLite3::Database.new("kittens.db")
 db.results_as_hash = true
 
 # learn about fancy string delimiters
+vars = "name"
+var = "CREATE"
 create_table_cmd = <<-SQL
-  CREATE TABLE IF NOT EXISTS kittens(
+  #{var} TABLE IF NOT EXISTS kittens(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
+    #{vars} VARCHAR(255),
     age INT
   )
 SQL
@@ -37,8 +39,8 @@ end
 end
 
 # explore ORM by retrieving data
-# kittens = db.execute("SELECT * FROM kittens")
-# kittens.each do |kitten|
-#  puts "#{kitten['name']} is #{kitten['age']}"
-# end
+kittens = db.execute("SELECT * FROM kittens")
+kittens.each do |kitten|
+  puts kitten
+end
 
