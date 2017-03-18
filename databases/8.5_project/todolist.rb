@@ -31,10 +31,20 @@ def display_list(db)
   end 
 end 
 
-  # A method that will edit to do list items
-    #Input: item to be edited 
+  # A method that will edit to do list items which will be selected by its id number
+    #Input: id of item to be edited, database, edited item
     #Select to do list item to be edited by using primary key to select it
+    #Update item in the database
+def edit_item(db, id, new_item)
+  db.execute("UPDATE todolist SET item=? WHERE id=?", [new_item, id])
+end 
 
+# A method that will edit to do list items which will be selected by its id number
+    #Input: id of item to be edited, database, new date
+    #Select to do list item to be edited by using primary key to select it
+def edit_date(db, id)
+  
+end
   # A method that will add to do list items
     #Input: 
     #
