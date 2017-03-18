@@ -47,12 +47,15 @@ def edit_date(db, id, new_date)
   db.execute("UPDATE todolist SET date=? WHERE id=?", [new_date, id])
 end
 
-edit_date(db, 1, "12-12-2017")
-display_list(db)
-
   # A method that will add to do list items
-    #Input: 
-    #
+    #Input: database name, item to be added, due date
+    #Use inputs to add new item to list
+def add_item(db, new_item, new_date)
+  db.execute("INSERT INTO todolist (item, date, done) VALUES (?, ?, ?)", [new_item, new_date, "false"])
+end 
+
+add_item(db, "Milk Cows", "11-11-1911")
+display_list(db)
 
   # A method that will mark items as done
     #Input: To do list item that is done
