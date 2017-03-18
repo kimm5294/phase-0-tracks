@@ -7,30 +7,42 @@
 require "sqlite3"
 
 #Create the sqlite3 database
-database = SQLite3::Database.new("todolist.db")
-database.results_as_hash = true 
+db = SQLite3::Database.new("todolist.db")
 
 #Create the table if it doesn't exist already 
 create_table_cmd = <<-yoyoyo
   CREATE TABLE IF NOT EXISTS todolist (
   id INTEGER PRIMARY KEY, 
   item VARCHAR(255),
-  date DATE
+  date DATE,
+  done BOOLEAN
   )
 yoyoyo
-database.execute(create_table_cmd)
+db.execute(create_table_cmd)
 
 #Needed methods:
   # A method that will display to do list
-    #No input
+    #Input: db (the database)
     #Print out the to do list item and due date
+def display_list(db)
+  list = db.execute("SELECT id, item, date FROM todolist")
+  list.each do |x|
+    puts "#{x[0]}: #{x[1]} Due: #{x[2]}" 
+  end 
+end 
 
   # A method that will edit to do list items
+    #Input: item to be edited 
+    #Select to do list item to be edited by using primary key to select it
+
+  # A method that will add to do list items
     #Input: 
     #
 
-  # A method that will add to do list items
   # A method that will mark items as done
+    #Input: To do list item that is done
+    #
+
   # A method that will delete to do list items 
   # A method that will make a new list
     #This method should create a new table and allow it to be named
