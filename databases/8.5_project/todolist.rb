@@ -42,9 +42,14 @@ end
 # A method that will edit to do list items which will be selected by its id number
     #Input: id of item to be edited, database, new date
     #Select to do list item to be edited by using primary key to select it
-def edit_date(db, id)
-  
+    #Update the due date using input
+def edit_date(db, id, new_date)
+  db.execute("UPDATE todolist SET date=? WHERE id=?", [new_date, id])
 end
+
+edit_date(db, 1, "12-12-2017")
+display_list(db)
+
   # A method that will add to do list items
     #Input: 
     #
