@@ -65,5 +65,15 @@ def mark_done(db, id)
 end 
 
   # A method that will delete to do list items 
+    #Input: database, id of item to be deleted
+    #Use item's id number to delete the row from the table
+def delete_item(db, id)
+  db.execute("DELETE FROM todolist WHERE id=?", [id])
+end 
+
+
   # A method that will make a new list
     #This method should create a new table and allow it to be named
+
+
+
