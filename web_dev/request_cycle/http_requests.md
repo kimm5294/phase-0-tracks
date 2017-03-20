@@ -8,4 +8,6 @@
     *404 Not Found- Server did not find anything in the location of the request 
     *500 Internal Server Error- Server could not fulfill the request because of an unexpected error
 
-2. 
+2. A GET request is one that is requesting information/data from a source like a server. A POST request is one that is sending data to a server. GET requests should be used to retrieve data and are usually not as safe because they can be cached and bookmarked. A POST request is not able to be saved in the bookmarks, history or cached so it is usually safer. 
+
+3. 
