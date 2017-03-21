@@ -21,3 +21,15 @@ var headers = document.getElementsByTagName("h1");
 for (var i=0; i<headers.length; i++) {
   headers[i].style.color = "blue"; 
 }
+
+//Create function that turns header font red
+function turnFontRed(event) {
+  for (var i=0; i<headers.length; i++) {
+    headers[i].style.color = "red"; 
+  }  
+}
+
+//Loop through headers array and add event listener that changes font red when click
+for (var i=0; i<headers.length; i++) {
+  headers[i].addEventListener("click", turnFontRed); 
+}
