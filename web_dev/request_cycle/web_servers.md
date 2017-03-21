@@ -2,4 +2,6 @@
     *Some other key components of the Linux philosophy include keeping things smaller such as smaller, cleaner programs. 
     *There is also the idea that each program should only do one thing as long as it does it well. 
 
-2. A virtual private server (VPS) is like a computer that runs all of the software but has none of the hardware, also known as a virtual machine. But more specifically a VPS is a type of service that creates virtual machines for users to use. 
+2. A virtual private server (VPS) is like a computer that runs all of the software but has none of the hardware, also known as a virtual machine. So a virtual machine will have all of the operating systems of a normal computer and can be given all of the commands in the command line. But more specifically a VPS is a type of service that creates virtual machines for users to use. 
+
+3. It is bad practice to run programs and such as a root user on a Linux system because the root user is given administrative power and total privilege over everything in the system. If programs are run using the root user, then they will have access to everything, and this just creates a security issue. There is no point in giving access to everything when you don't need to. Also as root, the system will not ask if you are sure if you want to do something so you can delete a lot of stuff by accident and there are no measures to prevent that. 
