@@ -10,6 +10,8 @@
 *I found that using google was the most efficient for finding out quick things about jquery like what it does, where to write the code
 *W3schools was a great resource for figuring out how to write stuff and practicing jquery as well as getting much more in depth details
 *W3schools was my primary source of information and then codecademy was a secondary one I used
+*Digital ocean also proved to be a useful resource because it had step by step guides on how to use jquery and examples
+
 
 ##Things I learned
 *jQuery is a form of javascript that makes it easier to use
