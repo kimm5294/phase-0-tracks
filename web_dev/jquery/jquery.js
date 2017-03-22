@@ -5,7 +5,17 @@ $(document).ready(function() {
 
   //Make items toggle out of sight with a click of the button
   $("#fade").click(function() {
-    $("h1").fadeToggle();
+    $("img").fadeToggle();
   });
+
+  //Hovering over button will turn title blue
+  $("#fade").mouseenter(function() {
+    $("#title").css("color", "blue");
+  });  
+
+  //Leaving hover over button will revert title to black color
+  $("#fade").mouseleave(function() {
+  $("#title").css("color", "black");
+  }); 
 
 }); 
