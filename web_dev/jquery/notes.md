@@ -11,10 +11,10 @@
 *W3schools was a great resource for figuring out how to write stuff and practicing jquery as well as getting much more in depth details
 *W3schools was my primary source of information and then codecademy was a secondary one I used
 *Digital ocean also proved to be a useful resource because it had step by step guides on how to use jquery and examples
-
+*Looking through different sources and trying each thing out as you go has been very helpful in learning how things work
 
 ##Things I learned
 *jQuery is a form of javascript that makes it easier to use
 *jQuery files are javascript files that are linked to html files just like a normal stylesheet except preferably at the bottom
 *You need to "activate" jquery by connecting to a cdn or downloading and connecting to a local jquery file
-*
+*Etc
