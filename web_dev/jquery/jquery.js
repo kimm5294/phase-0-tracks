@@ -18,4 +18,12 @@ $(document).ready(function() {
   $("#title").css("color", "black");
   }); 
 
+  //More concise mouse hover event tracker
+  $("h2").hover(function() {
+  $("h2").css("color", "blue");
+  },
+  function(){
+  $("h2").css("color", "black");
+  });   
+
 }); 
