@@ -86,3 +86,19 @@ get '/search' do
   end 
   text
 end 
+
+
+=begin 
+Answer to research questions
+
+1. Other ruby web app frameworks include Ruby on Rails, Volt, Scorched, Hanami, Hobbit
+and many others. 
+
+2. Some other options for using databases with sinatra include Mongo, datamapper, 
+Postgre Sequel, ActiveRecord. 
+
+3. A web stack is all of the software that is needed for web development. This would 
+include an operating system, a programming language, database and web server. 
+
+
+=end 
