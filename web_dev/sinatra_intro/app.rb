@@ -57,10 +57,32 @@ end
 
 get '/great_job' do
   name = params[:name]
-  p name
   if name 
     "Great job, #{name}!"
   else 
     "Great job!"
   end 
+end 
+
+#Write a GET route that takes two route parameter inputs and adds them together
+#and returns the output
+
+get '/add/:num1/:num2' do
+  answer = params[:num1].to_i + params[:num2].to_i
+  "The answer is #{answer}!"
+end 
+
+#Write a GET route that takes a query parameter and filters them based on what
+#city they are from 
+
+get '/search' do
+  city = params[:city]
+  students = db.execute("SELECT * FROM students WHERE campus=?", [params[:city]])
+  text = ""
+  students.each do |student|
+    p student
+    text << "#{student["name"]}<br>"
+    text << "#{student["campus"]}<br><br>"
+  end 
+  text
 end 
