@@ -34,9 +34,15 @@ get '/student_campus' do
   erb :template
 end 
 
+get '/new_campus' do 
+  erb :new_campus
+end 
 
 post '/campuses' do
+  p params['name']
   db.execute("INSERT INTO campuses (name) VALUES (?)", [params['name']])
-  redirect 'student_campus'
+  redirect '/student_campus'
 end
+
+
 
