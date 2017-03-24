@@ -30,7 +30,7 @@ end
 #Module 9.5
 #show student names and campus
 get '/student_campus' do 
-  @students = db.execute("SELECT * FROM students")
+  @campuses = db.execute("SELECT * FROM campuses")
   erb :template
 end 
 
