@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management System</title>
+</head>
+<body>
+
+
+  <ul>
+    <% @campuses.each do |campus| %>
+      <li><%= campus['name'] %></li>
+    <% end %>
+  </ul>
+
+
+
+  <form action="/campus" method="POST">
+    <input type="text" name="campus" placeholder="Campus">
+    <button type="submit">Save</button>
+  </form>
+</body>
+</html>
